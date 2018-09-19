@@ -1,5 +1,5 @@
 {
-  "name": "vcheck",
+  "name": "@nialloc9/vcheck",
   "version": "1.0.1",
   "description": "A validator library for common use cases.",
   "main": "lib/index.js",
@@ -11,7 +11,7 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js}"
+      "**/*.{js}"
     ]
   },
   "lint-staged": {
@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
