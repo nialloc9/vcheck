@@ -1,0 +1,52 @@
+{
+  "name": "vcheck",
+  "version": "1.0.1",
+  "description": "A validator library for common use cases.",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "babel --source-maps -d lib/ src/",
+    "prepublish": "npm run test ; npm run compile",
+    "precommit": "lint-staged",
+    "test": "jest"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js}"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --print-width 120 --tab-width 4 --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nialloc9/vcheck.git"
+  },
+  "keywords": [
+    "validator",
+    "js"
+  ],
+  "author": "nialloc9@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nialloc9/vcheck/issues"
+  },
+  "homepage": "https://github.com/nialloc9/vcheck#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "husky": "^0.14.3",
+    "jest": "^23.1.0",
+    "jest-fetch-mock": "^1.6.5",
+    "lint-staged": "^7.2.0",
+    "nock": "^9.3.3",
+    "prettier": "^1.13.5"
+  }
+}
