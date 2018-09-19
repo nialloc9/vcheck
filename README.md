@@ -4,7 +4,7 @@ A validator library for common use cases.
 
 ### Latest stable release
 
-- 1.0.1
+- 1.0.2
 
 ### Usage
 
