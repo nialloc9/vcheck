@@ -4,13 +4,13 @@ A validator library for common use cases.
 
 ### Latest stable release
 
-- 1.0.3
+- 1.0.4
 
 ### Usage
 
 - install package
 
-        $ npm i --save vcheck
+        $ npm i --save @nialloc9/vcheck
 
 * import package
   import { validateRequired } from 'nialloc9@vcheck';
