@@ -4,7 +4,7 @@ A validator library for common use cases.
 
 ### Latest stable release
 
-- 1.0.2
+- 1.0.3
 
 ### Usage
 
@@ -13,7 +13,7 @@ A validator library for common use cases.
         $ npm i --save vcheck
 
 * import package
-  import { validateRequired } from 'vcheck';
+  import { validateRequired } from 'nialloc9@vcheck';
 * use on it's own and call function
 
         const error = validateRequired(myValue);
@@ -22,15 +22,16 @@ A validator library for common use cases.
 
 * or easily ntegrate with redux-form package
 
-  import { validateRequired } from 'vcheck';
-  import { Field } from 'redux-form';
+        import { validateRequired } from 'nialloc9/vcheck';
+        import { Field } from 'redux-form';
 
-  <Field
-  name="name"
-  size="small"
-  type="text"
-  component="input"
-  validate={validateRequired}
+        <Field
+        name="name"
+        size="small"
+        type="text"
+        component="input"
+        validate={validateRequired}
+
   />
 
 ### Methods
