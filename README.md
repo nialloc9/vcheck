@@ -1,4 +1,4 @@
-![VCheck logo](assets/logo.png?raw=true | width=100)
+<img src="assets/logo.png" alt='VCheck logo' width="100">
 
 # vcheck
 
