@@ -1,4 +1,4 @@
-<img src="assets/logo.png" alt='VCheck logo' width="100">
+<img src="https://raw.githubusercontent.com/nialloc9/vcheck/master/assets/logo.png" alt='VCheck logo' width="100">
 
 # vcheck
 
@@ -6,7 +6,7 @@ A validator library for common use cases.
 
 ### Latest stable release
 
-- 1.0.5
+- 1.0.6
 
 ### Usage
 
