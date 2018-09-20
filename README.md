@@ -1,4 +1,4 @@
-![VCheck logo](assets/logo.png?raw=true "Title")
+![VCheck logo](assets/logo.png?raw=true | width=100)
 
 # vcheck
 
