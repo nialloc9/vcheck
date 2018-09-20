@@ -6,7 +6,7 @@ A validator library for common use cases.
 
 ### Latest stable release
 
-- 1.0.4
+- 1.0.5
 
 ### Usage
 
@@ -187,4 +187,8 @@ A validator library for common use cases.
 
 ### Contributing
 
-    Contributions are always welcome. Just open a PR.
+Contributions are always welcome. Just open a PR.
+
+### Notes
+
+Sample logo in assets created using: https://logomakr.com/
