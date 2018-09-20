@@ -1,3 +1,5 @@
+![VCheck logo](assets/logo.png?raw=true "Title")
+
 # vcheck
 
 A validator library for common use cases.
@@ -20,7 +22,7 @@ A validator library for common use cases.
 
         if(error) throw new Error(error);
 
-* or easily ntegrate with redux-form package
+* or easily integrate with redux-form package
 
         import { validateRequired } from 'nialloc9/vcheck';
         import { Field } from 'redux-form';
