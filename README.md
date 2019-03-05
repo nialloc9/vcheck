@@ -14,13 +14,21 @@ A validator library for common use cases.
 
         $ npm i --save @nialloc9/vcheck
 
-* import package
-  import { validateRequired } from 'nialloc9@vcheck';
 * use on it's own and call function
+
+        import { validateRequired } from 'nialloc9@vcheck';
 
         const error = validateRequired(myValue);
 
         if(error) throw new Error(error);
+
+* use multiple validators in a pipeline
+
+  import { validateRequired, validateTelephoneNumber, pipeline } from 'nialloc9@vcheck';
+
+  const error = pipeline([validateRequired, validateTelephoneNumber], myValue); -> order matters as validateRequired will be first rule tested
+
+  if(error) throw new Error(error);
 
 * or easily integrate with redux-form package
 

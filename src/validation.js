@@ -169,3 +169,27 @@ export const validateTelephoneNumber = value =>
  * @returns {string | undefined}
  */
 export const validateRequiredMessage = value => required(value, "Please enter a message.");
+
+/**
+ * @description returns an error if one is found by validators
+ * @param {[func]} validators
+ * @param {*} value
+ */
+export const pipeline = (validators, value) => {
+    const result = validators.reduce(
+        (result, validator) => {
+            if (result.error) return result;
+
+            const error = validator(result.value);
+
+            if (error) {
+                result.error = error;
+            }
+
+            return result;
+        },
+        { value, error: undefined }
+    );
+
+    return result.error;
+};
