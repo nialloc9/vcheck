@@ -6,7 +6,7 @@ A validator library for common use cases.
 
 ### Latest stable release
 
-- 1.0.6
+- 1.0.9
 
 ### Usage
 
@@ -24,11 +24,11 @@ A validator library for common use cases.
 
 * use multiple validators in a pipeline
 
-  import { validateRequired, validateTelephoneNumber, pipeline } from 'nialloc9@vcheck';
+        import { validateRequired, validateTelephoneNumber, pipeline } from 'nialloc9@vcheck';
 
-  const error = pipeline([validateRequired, validateTelephoneNumber], myValue); -> order matters as validateRequired will be first rule tested
+        const error = pipeline([validateRequired, validateTelephoneNumber], myValue); -> order matters as validateRequired will be first rule tested
 
-  if(error) throw new Error(error);
+        if(error) throw new Error(error);
 
 * or easily integrate with redux-form package
 
