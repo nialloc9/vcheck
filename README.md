@@ -188,6 +188,26 @@ A validator library for common use cases.
 
          validateRequiredMessage(myValue);
 
+* @description validates whether a correct domain has been entered
+* @param {{string}} value - value
+* @returns {string | undefined}
+
+         validateDomain(myValue);
+
+* @description runs validators on value from left to right
+* @param {{func}} validators
+* @param {{string}} value 
+* @returns {string | undefined}
+
+         pipeline([validateRequiredMessage, validateDomain], myValue);
+
+* @description runs validators on value from left to right as a hof
+* @param {{func}} validators
+* @param {{string}} value 
+* @returns {string | undefined}
+
+         pipelineHof([validateRequiredMessage, validateDomain])(myValue);
+         
 ### Testing
 
 - Run the tests
