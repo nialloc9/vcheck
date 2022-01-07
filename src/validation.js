@@ -1,4 +1,5 @@
 import { isNumber, isNull } from "lodash";
+import isValidDomain from 'is-valid-domain';
 
 /**
  * @description validates whether a value is is present
@@ -171,6 +172,14 @@ export const validateTelephoneNumber = value =>
 export const validateRequiredMessage = value => required(value, "Please enter a message.");
 
 /**
+ * @description check if valid domain
+ * @param {{string}} - value
+ * @returns {string | undefined}
+ */
+ export const validateDomain = value =>
+ isValidDomain(value) ? undefined : 'Invalid domain';
+
+/**
  * @description returns an error if one is found by validators
  * @param {[func]} validators
  * @param {*} value
@@ -193,3 +202,12 @@ export const pipeline = (validators, value) => {
 
     return result.error;
 };
+
+/**
+ * @description returns an error if one is found by validators using a hof
+ * @param {[func]} validators
+ * @param {*} value
+ */
+export const pipelineHof = validators => value =>
+validators.reduce((error, validator) => error || validator(value), undefined)
+

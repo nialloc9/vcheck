@@ -20,7 +20,8 @@ import {
     validateRequiredPasswordConfirmation,
     validateRequiredDay,
     validateRequiredTime,
-    validateTelephoneNumber
+    validateTelephoneNumber,
+    validateDomain
 } from "../src";
 
 describe("validateRequired test suite", () => {
@@ -210,5 +211,15 @@ describe("validateTelephoneNumber test suite", () => {
 
     it("should return undefined when number is telephone number", () => {
         expect(validateTelephoneNumber("+44753733377")).toBe(undefined);
+    });
+});
+
+describe("validateDomain test suite", () => {
+    it("should return error message when domain is invalid", () => {
+        expect(validateDomain('-example.co.uk')).toBe("Invalid domain");
+    });
+
+    it("should return undefined when domain is valid", () => {
+        expect(validateDomain("test.com")).toBe(undefined);
     });
 });

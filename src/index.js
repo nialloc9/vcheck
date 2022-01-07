@@ -20,7 +20,10 @@ import {
     validateRequiredTime,
     validateTelephoneNumber,
     validateMinLength,
-    validateRequiredMessage
+    validateRequiredMessage,
+    validateDomain,
+    pipeline,
+    pipelineHof
 } from "./validation";
 
 export {
@@ -45,5 +48,8 @@ export {
     validateRequiredTime,
     validateTelephoneNumber,
     validateMinLength,
-    validateRequiredMessage
+    validateRequiredMessage,
+    validateDomain,
+    pipeline,
+    pipelineHof
 };
