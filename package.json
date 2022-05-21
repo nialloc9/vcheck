@@ -1,6 +1,6 @@
 {
   "name": "@nialloc9/vcheck",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A validator library for common use cases.",
   "main": "lib/index.js",
   "scripts": {
