@@ -1,5 +1,6 @@
 jobs:
   publish:
+    on: push
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
