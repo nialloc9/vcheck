@@ -21,7 +21,8 @@ import {
     validateRequiredDay,
     validateRequiredTime,
     validateTelephoneNumber,
-    validateDomain
+    validateDomain,
+    validateSpecialChars
 } from "../src";
 
 describe("validateRequired test suite", () => {
@@ -221,5 +222,15 @@ describe("validateDomain test suite", () => {
 
     it("should return undefined when domain is valid", () => {
         expect(validateDomain("test.com")).toBe(undefined);
+    });
+});
+
+describe("validateSpecialChars test suite", () => {
+    it("should return error message when text is invalid", () => {
+        expect(validateSpecialChars('is this a question?')).toBe("Special characters not allowed");
+    });
+
+    it("should return undefined when text is valid", () => {
+        expect(validateDomain("is this a question")).toBe(undefined);
     });
 });

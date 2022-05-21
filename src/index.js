@@ -22,6 +22,7 @@ import {
     validateMinLength,
     validateRequiredMessage,
     validateDomain,
+    validateSpecialChars,
     pipeline,
     pipelineHof
 } from "./validation";
@@ -50,6 +51,7 @@ export {
     validateMinLength,
     validateRequiredMessage,
     validateDomain,
+    validateSpecialChars,
     pipeline,
     pipelineHof
 };

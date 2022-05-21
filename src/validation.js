@@ -179,6 +179,14 @@ export const validateRequiredMessage = value => required(value, "Please enter a 
  export const validateDomain = value =>
  isValidDomain(value) ? undefined : 'Invalid domain';
 
+ /**
+ * @description validates whether string has special characters
+ */
+export const validateSpecialChars = (value) =>
+value && /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]+/.test(value)
+  ? "Special characters not allowed"
+  : undefined;
+
 /**
  * @description returns an error if one is found by validators
  * @param {[func]} validators
