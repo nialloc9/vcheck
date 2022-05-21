@@ -194,6 +194,12 @@ A validator library for common use cases.
 
          validateDomain(myValue);
 
+* @description validates whether a string with special chars has been entered
+* @param {{string}} value - value
+* @returns {string | undefined}
+
+         validateSpecialChars(myValue);
+
 * @description runs validators on value from left to right
 * @param {{func}} validators
 * @param {{string}} value 
