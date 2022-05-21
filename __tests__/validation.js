@@ -231,6 +231,6 @@ describe("validateSpecialChars test suite", () => {
     });
 
     it("should return undefined when text is valid", () => {
-        expect(validateDomain("is this a question")).toBe(undefined);
+        expect(validateSpecialChars("is this a question")).toBe(undefined);
     });
 });
